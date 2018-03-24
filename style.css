@@ -28,3 +28,8 @@ body {
   position: absolute;
 }
 
+h1{
+  color: #FFFFFF;
+  font-size: 100%;
+  font-weight: 800;
+}
