@@ -1,3 +1,11 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
  margin: 0px;
  padding: 0px;
@@ -39,12 +47,11 @@ h1 {
 
 input {
   display: block;
-    margin: auto;
-    margin-top: 30px;
-    width: 81%;
-    height: auto;
-    margin-top: 9%;
-    padding: 2.7%;
+  margin: auto;
+  margin-top: 30px;
+  width: 81%;
+  height: auto;
+  padding: 10px;
 }
 
 .enter-button {
