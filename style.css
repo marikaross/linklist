@@ -1,8 +1,8 @@
 body {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Open Sans', sans-serif;
-  height: 100%;
+ margin: 0px;
+ padding: 0px;
+ font-family: ‘Open Sans’, sans-serif;
+ height: 100%;
 }
 
 .left-side {
@@ -22,14 +22,14 @@ body {
 
 
 .right-side {
-  margin-left: 50%;
-  width: 50%;
-  height: 100%;
-  background-color: #cfd8dc;
-  position: absolute;
+ margin-left: 50%;
+ width: 50%;
+ height: 100%;
+ background-color: #cfd8dc;
+ position: absolute;
 }
 
-h1 {
+h1 {  
   margin-top: 30%;
   text-align: center;
   font-size: 63px;
@@ -50,38 +50,94 @@ input {
 .enter-button {
   width: 88%;
   height: 35%;
-  color: white;
+  color: #fff;
   border: none;
   background-color:#ffc007;
   margin-top: 9%;
   height: auto;
   padding: 2.7%;
   font-size: 100%;
-    font-weight: 800;
+  font-weight: 800;
 }
 
- input::placeholder {
-    font-size: 300%;
-    font-weight: 400;
-    margin-top:10%;
- }
+.enter-button:hover {
+  background-color: #ffd773;
+}
 
+input::placeholder {
+  font-size: 300%;
+  font-weight: 400;
+  margin-top:10%;
+}
 
+article {
+    border: solid 2px #607d8b;
+    background-color: #fff;
+    margin: 5%;
+}
+
+h2 {
+    color: #445a64;
+    font-size: 182%;
+    margin: 3%;
+    margin-bottom: 3%;
+}
+
+p {
+    color: #607d8b;
+    font-size: 138%;
+    margin-left: 3%;
+    margin-bottom: 4%;
+    text-decoration: underline #f4f6f9;
+}
+
+p:hover {
+  text-decoration: underline #ffc107;
+  font-weight: 800;
+}
+
+.read-button {
+  border: none;
+  color: #455a64;
+  font-size: 80%;
+}
+
+.read-button:hover {
+  text-decoration: underline #ffc107;
+  font-weight: 800;
+}
+
+.delete-button {
+  float: right;
+  border: none;
+  color: #455a64;
+  font-size: 80%;
+
+}
+
+.delete-button:hover {
+  text-decoration: underline #ffc107;
+}
+
+hr {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+/*
 
 /*
-Enter button #ffc007
 hover #ffd773
-article header #445a64
-article border #607d8b
+
+
 read buttons f55ad4
 read text#455a64
 pg break #cfd8dc
-url #607d8b
+
 underline f2f4f4
 hover underline #ffc107
 read button read #f05a28
 read background: #f2f4f4
 link button read #cfd8dc
-
-
 */
+
