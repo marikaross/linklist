@@ -18,3 +18,9 @@ function textTransfer() {
   var newUrl = $('.input-url').val();
   $('.output-url').text(newUrl);
 };
+
+$('.read-button').on('click', readClass);
+
+function readClass() {
+  $('.read-button').toggleClass('#color-red');
+}
