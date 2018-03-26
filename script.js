@@ -33,14 +33,20 @@ function addBookmark() {
   outputUrl.innerText = newUrl;
 }
 
-readBtn.addEventListener ('click', function(){
- readBtn.classList.toggle('.color-red')
-});
+// readBtn.addEventListener ('click', function(){
+//  readBtn.classList.toggle('.color-red')
+// });
 
- //  `<article class="bookmark">
-//        <h2 class="output-title">${newText}</h2>
-//        <hr>
-//        <p class="output-url">#</p><hr>
-//        <button class="read-button color-red">Read</button>  
-//        <button class="delete-button">Delete</button>
-//      </article>`
+var rightSide = document.querySelector('.right-side');
+var bookmark = document.querySelector('article');
+bookmark.innerHTML = 
+
+ `<article class="bookmark">
+          <h2 class="output-title"></h2>
+          <hr>
+          <p class="output-url"></p><hr>
+          <button class="read-button color-red">Read</button>  
+          <button class="delete-button">Delete</button>
+          </article>`
+
+          rightSide.appendChild(bookmark);
