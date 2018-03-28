@@ -148,21 +148,20 @@ hr {
   text-decoration: none;
 }
 
+@media screen and (max-width: 830px) {
+  .right-side {
+    margin-left: 0;
+    width: 100%;
+  }
 
-/*
+  .left-side {
+    position:relative;
+    width: 100%;
+  }
+}
 
-/*
-hover #ffd773
+@media screen and (min-width: 900px) {
 
+}
 
-read buttons f55ad4
-read text#455a64
-pg break #cfd8dc
-
-underline f2f4f4
-hover underline #ffc107
-read button read #f05a28
-read background: #f2f4f4
-link button read #cfd8dc
-*/
 
