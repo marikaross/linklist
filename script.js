@@ -5,8 +5,8 @@ var $readBtn = $('.read-button');
 var $deleteBtn = $('.delete-button');
 var $rightSide = $('.right-side');
 var $bookmarkArea = $('.total-counter');
-// var outputTitle = $('output-title');
-// var outputUrl = $('.output-url');
+var $count = 0;
+
 
 $enterBtn.on('click', newBookmark);
 
@@ -15,11 +15,13 @@ function newBookmark() {
 }
 
 function bookmarkContent() {
+  $count++;
   var newTitle = $inputTitle.val();
-  $inputTitle.val('')
+  $inputTitle.val('');
   var newUrl = $inputUrl.val();
-  $inputUrl.val('')
+  $inputUrl.val('');
   $enterBtn.prop('disabled', true);
+  $bookmarkArea.text($count);
   return (`<article class="bookmark">
             <h2 class="output-title">${newTitle}</h2>
             <hr>
@@ -37,7 +39,9 @@ $(this).closest('article').toggleClass('read-bookmark');
 });
 
 $rightSide.on('click', '.delete-button', function (event){
+  $count--;
   $(this).closest('article').remove();
+  $bookmarkArea.text($count);
 });
 
 $inputUrl.on('keydown',function() {
@@ -48,23 +52,5 @@ $inputUrl.on('keydown',function() {
 
 
 
-// on enter bookmark counter ++ 
-// on delete bookmark counter --
 
-
-  // enterBtn.on('click', function() {
-  // var bookmarkCounter = 0;
-  //   bookmarkCounter ++
-  //   $('.total-counter').text('Bookmark count: ' +bookmarkCounter)
-  // });
-
-// bookmarkCounter = 0
-// bookmarkCounter ++
-// bookmarkArea.text('Bookmark count: ' +bookmarkCounter);
-
-
-// if ('.color-red' = true) {
-//   readcounter ++ && unreadcounter --
-// } else { 
-//   readcounter -- && unreadcounter ++}
 
