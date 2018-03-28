@@ -15,14 +15,31 @@ function newBookmark() {
 
 function bookmarkContent() {
   var newTitle = inputTitle.val();
+  inputTitle.val('')
+  console.log(newTitle)
   var newUrl = inputUrl.val();
+  inputUrl.val('')
 
   return (`<article class="bookmark">
             <h2 class="output-title">${newTitle}</h2>
             <hr>
-            <p class="output-url">${newUrl}</p><hr>
-            <button class="read-button color-red">Read</button>  
+            <a href="#"><p class="output-url">${newUrl}</p></a>
+            <hr>
+            <button class="read-button">Read</button>  
             <button class="delete-button">Delete</button>
           </article>`)
 };
 
+rightSide.on('click', '.read-button', function (event){
+$(event.currentTarget).toggleClass('color-red');
+});
+
+rightSide.on('click', '.delete-button', function (event){
+  $(this).closest('article').remove();
+});
+
+inputUrl.on('keydown',function() {
+  if(inputUrl.val() && inputTitle.val()) {
+    enterBtn.prop('disabled', false);
+  }
+});
