@@ -51,7 +51,7 @@ input {
   margin-top: 30px;
   width: 81%;
   height: auto;
-  padding: 10px;
+  font-size: 35px;
 }
 
 .enter-button {
@@ -76,7 +76,6 @@ input {
 }
 
 input::placeholder {
-  font-size: 300%;
   font-weight: 400;
   margin-top:10%;
 }
@@ -123,6 +122,7 @@ p:hover {
   border: none;
   color: #455a64;
   font-size: 80%;
+  background-color: transparent;
 
 }
 
@@ -136,16 +136,17 @@ hr {
   margin-top: 3%;
 }
 
-.color-red {
+.read-bookmark {
+background-color: #f2f4f4;
+}
+.read-bookmark button:first-of-type {
   color: #f05a28;
   font-weight: 800;
   background-color: #f2f4f4;
   text-decoration: none;
 }
 
-.read-bookmark {
-background-color: #f2f4f4;
-}
+
 /*
 
 /*
