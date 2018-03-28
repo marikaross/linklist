@@ -2,7 +2,6 @@ var inputTitle = $('.input-title');
 var inputUrl = $('.input-url');
 var enterBtn = $('.enter-button');
 var readBtn = $('.read-button');
-console.log(readBtn)
 var deleteBtn = $('.delete-button');
 var rightSide = $('.right-side');
 // var outputTitle = $('output-title');
@@ -17,7 +16,6 @@ function newBookmark() {
 function bookmarkContent() {
   var newTitle = inputTitle.val();
   inputTitle.val('')
-  console.log(newTitle)
   var newUrl = inputUrl.val();
   inputUrl.val('')
   
@@ -33,7 +31,7 @@ function bookmarkContent() {
 
 
 rightSide.on('click', '.read-button', function (event){
-$(event.currentTarget).toggleClass('color-red');
+$(event.currentTarget).toggleClass('color-red read-bookmark');
 });
 
 rightSide.on('click', '.delete-button', function (event){
