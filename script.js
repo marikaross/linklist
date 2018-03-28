@@ -2,6 +2,7 @@ var inputTitle = $('.input-title');
 var inputUrl = $('.input-url');
 var enterBtn = $('.enter-button');
 var readBtn = $('.read-button');
+console.log(readBtn)
 var deleteBtn = $('.delete-button');
 var rightSide = $('.right-side');
 // var outputTitle = $('output-title');
@@ -19,7 +20,7 @@ function bookmarkContent() {
   console.log(newTitle)
   var newUrl = inputUrl.val();
   inputUrl.val('')
-
+  
   return (`<article class="bookmark">
             <h2 class="output-title">${newTitle}</h2>
             <hr>
@@ -29,6 +30,7 @@ function bookmarkContent() {
             <button class="delete-button">Delete</button>
           </article>`)
 };
+
 
 rightSide.on('click', '.read-button', function (event){
 $(event.currentTarget).toggleClass('color-red');
@@ -43,3 +45,4 @@ inputUrl.on('keydown',function() {
     enterBtn.prop('disabled', false);
   }
 });
+
