@@ -12,7 +12,7 @@ $enterBtn.on('click', newBookmark);
 
 function newBookmark() {
   $rightSide.append(bookmarkContent);
-}
+};
 
 function bookmarkContent() {
   $count++;
