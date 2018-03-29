@@ -1,25 +1,27 @@
-/* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
- margin: 0px;
- padding: 0px;
  font-family: 'Open Sans', sans-serif;
  height: 100%;
+ margin: 0px;
+ padding: 0px;
 }
 
+/*elements of left side*/
+
 .left-side {
-text-align: center;
   background-color: #455a64;
   display: inline-block;
-  width: 50%;
   height: 100%;
   position: fixed;
+  text-align: center;
+  width: 50%;
 }
 
 
@@ -30,42 +32,42 @@ text-align: center;
 
 
 .right-side {
- margin-left: 50%;
- width: 50%;
- height: 100vh;
- background-color: #cfd8dc;
- position: absolute;
- overflow: scroll;
+  background-color: #cfd8dc;
+  height: 100vh;
+  margin-left: 50%;
+  overflow: scroll;
+  position: absolute;
+  width: 50%;
 }
 
 h1 {  
+  color: #fff;
+  font-size: 63px;
   margin-top: 30%;
   text-align: center;
-  font-size: 63px;
-  color: #fff;
   
 }
 
 input {
   display: block;
-  margin: auto;
-  margin-top: 30px;
-  width: 81%;
-  height: auto;
   font-size: 35px;
+  height: auto;
+  margin-top: 30px;
+  margin: auto;
+  width: 81%;
 }
 
 .enter-button {
-  width: 88%;
-  height: 35%;
-  color: #fff;
-  border: none;
   background-color:#ffc007;
-  margin-top: 9%;
-  height: auto;
-  padding: 2.7%;
+  border: none;
+  color: #fff;
   font-size: 100%;
   font-weight: 800;
+  height: 35%;
+  height: auto;
+  margin-top: 9%;
+  padding: 2.7%;
+  width: 88%;
 }
 
 .enter-button:disabled {
@@ -81,30 +83,35 @@ input::placeholder {
   margin-top:10%;
 }
 
+.count-message,
+.total-counter {
+  color: #ffffff;
+  text-decoration: none;
+}
+ /*Left-side Elements*/
 article {
-    border: solid 2px #607d8b;
-    background-color: #fff;
-    margin: 5%;
+  border: solid 2px #607d8b;
+  background-color: #fff;
+  margin: 5%;
 }
 
 h2 {
-    color: #445a64;
-    font-size: 182%;
-    margin: 3%;
-    margin-bottom: 3%;
+  color: #445a64;
+  font-size: 182%;
+  margin: 3%;
 }
 
 p {
-    color: #607d8b;
-    font-size: 138%;
-    margin-left: 3%;
-    margin-bottom: 4%;
-    text-decoration: underline #f4f6f9;
+  color: #607d8b;
+  font-size: 138%;
+  margin-bottom: 4%;
+  margin-left: 3%;
+  text-decoration: underline #f4f6f9;
 }
 
 p:hover {
-  text-decoration: underline #ffc107;
   font-weight: 800;
+  text-decoration: underline #ffc107;
 }
 
 .read-button {
@@ -114,16 +121,16 @@ p:hover {
 }
 
 .read-button:hover {
-  text-decoration: underline #ffc107;
   font-weight: 800;
+  text-decoration: underline #ffc107;
 }
 
 .delete-button {
-  float: right;
+  background-color: transparent;
   border: none;
   color: #455a64;
+  float: right;
   font-size: 80%;
-  background-color: transparent;
 
 }
 
@@ -132,9 +139,9 @@ p:hover {
 }
 
 hr {
-  margin-left: 3%;
-  margin-right: 3%;
   margin-top: 3%;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
 .read-bookmark {
@@ -142,11 +149,13 @@ hr {
 }
 
 .read-bookmark button:first-of-type {
+  background-color: #f2f4f4;
   color: #f05a28;
   font-weight: 800;
-  background-color: #f2f4f4;
   text-decoration: none;
 }
+
+/*Responsive*/
 
 @media screen and (max-width: 830px) {
   .right-side {

@@ -10,6 +10,13 @@ var $count = 0;
 
 $enterBtn.on('click', newBookmark);
 
+$rightSide.on('click', '.read-button', readToggle);
+
+$rightSide.on('click', '.delete-button', deleteCounter);
+
+
+$inputUrl.on('keydown', inputCheck);
+
 function newBookmark() {
   $rightSide.append(bookmarkContent);
 };
@@ -33,24 +40,21 @@ function bookmarkContent() {
 };
 
 
-$rightSide.on('click', '.read-button', function (event){ 
+function inputCheck() {
+ if($inputUrl.val() && $inputTitle.val()) {
+    $enterBtn.prop('disabled', false);
+  }
+};
+
+function readToggle() {
   console.log($(this).closest('article'))
 $(this).closest('article').toggleClass('read-bookmark');
-});
+};
 
-$rightSide.on('click', '.delete-button', function (event){
+function deleteCounter() {
   $count--;
   $(this).closest('article').remove();
   $bookmarkArea.text($count);
-});
-
-$inputUrl.on('keydown',function() {
-  if($inputUrl.val() && $inputTitle.val()) {
-    $enterBtn.prop('disabled', false);
-  }
-});
-
-
-
+};
 
 
